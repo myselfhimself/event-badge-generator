@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "roboto";
+  src: url('font/Roboto-Regular.ttf');
+}
+
+.content {
+  margin:auto auto;
+  width: 194mm;
+  height:252mm;
+}
+
+.img-container {
+  position:absolute;
+  bottom:0;
+}
+
+.icon {
+  height: 52;
+  float: inherit;
+  margin-left: 20mm;
+  margin-bottom: 10mm;
+}
+
+.card {
+  width: 95mm;
+  height: 80mm;
+  position:relative;
+  display: inline-block;
+  background-image: url("img/img.jpg");
+  background-position: right bottom;
+  background-size: cover;
+  border-right: 1px solid black;
+  border-color: black;
+}
+
+.container {
+  border: 1px solid black;
+  border-color: black;
+  margin-top: 3mm;
+  display: inline-block;
+}
+.text-container {
+  margin-left: 15mm;
+  margin-top: 17mm;
+}
+.text {
+  color: white;
+  font-family: "roboto";
+  font-weight: bolder;
+}
+
+.team {
+  margin-top: 8mm;
+}

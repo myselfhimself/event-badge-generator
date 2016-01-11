@@ -1,0 +1,132 @@
+<html>
+<head>
+  <script src="papaparse.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div id="instructions" class="content">
+    <form id="form" action="javascript:void(0);">
+      <h1>Instructions</h1>
+      <p>Attention: le format de sortie est adapt&eacute; &agrave; <span style="font-weight: bold;">Letter US</span>.</p>
+      <p>Pour changer le format, il faut changer les mesures en mm dans les classes css selon les dimensions du format papier souhait&eacute;.</p>
+      <p>Finalement, pour tous les autres changements (images, positionnement...), il faut aussi &eacute;diter le css directement.</p>
+      <h2>&Eacute;tape 1</h2>
+      <p>Choisir un fichier .csv avec 5 colonnes :</p>
+      <pre>First Name,Last Name,University name,Team's name,Development platform</pre>
+      <input type="file" id="file-input" />
+      <h2>&Eacute;tape 2</h2>
+      <p>Imprimer la page g&eacute;n&eacute;r&eacute;e avec <span style="color: blue;">Ctrl + p</span></p>
+      <p>Voici la configuration de l'impression :</p>
+      <img src="img/instruction1.png" />
+      <h2>&Eacute;tape 3</h2>
+      <p>C'est parti !</p>
+      <button onclick="validate()">G&eacute;n&eacute;rer les badges</button>
+    </form>
+  </div>
+
+  <div id="content" class="content">
+    <!-- <div class="container">
+
+      <div class="card">
+        <div class="text-container">
+          <p class="text">Thibaut Tauveron</p>
+          <p class="text">Ecole de technologie superieure</p>
+          <p class="text team">Team of the dead</p>
+        </div>
+        <div class="img-container">
+          <img src="img/android.png" class="icon" />
+        </div>
+      </div><div class="card">
+        <div class="text-container">
+          <p class="text">Thibaut Tauveron</p>
+          <p class="text">Ecole de technologie superieure</p>
+          <p class="text team">Team of the dead</p>
+        </div>
+        <div class="img-container">
+          <img src="img/android.png" class="icon" />
+        </div>
+      </div>
+
+    </div> -->
+  </div>
+
+<script>
+  var fileinput = document.getElementById('file-input');
+  var content = document.getElementById('content');
+  var instructions = document.getElementById('instructions');
+
+  function readSingleFile(file) {
+
+     if (!file) {
+       return;
+     }
+
+     Papa.parse(file, {
+       complete: function(results) {
+         displayContents(results.data);
+       }
+     });
+  }
+
+  function displayContents(contents) {
+
+    var htmlToDisplay = "";
+
+    for (line = 0; line < contents.length-1; line++) {
+      htmlToDisplay += '<div class="container">';
+
+        for(card = 0; card < 2 ; card++) {
+              htmlToDisplay += '<div class="card">';
+
+              htmlToDisplay += '<div class="text-container">';
+              htmlToDisplay += '<p class="text">'+contents[line][0]+' '+contents[line][1]+'</p>';
+              htmlToDisplay += '<p class="text">'+contents[line][2]+'</p>';
+              htmlToDisplay += '<p class="text team">'+contents[line][3]+'</p>';
+              htmlToDisplay += '</div>';
+              htmlToDisplay += '<div class="img-container">';
+
+              var imagePath = "";
+              switch (contents[line][4]) {
+                  case "Android":
+                      imagePath = "img/android.png";
+                      break;
+                  case "Ios":
+                  case "iOS":
+                      imagePath = "img/apple.png";
+                      break;
+                  case "Windows phone":
+                      imagePath = "img/windowsphone.png";
+                      break;
+              }
+
+              htmlToDisplay += '<img src="'+imagePath+'" class="icon" />';
+              htmlToDisplay += '</div>';
+
+              htmlToDisplay += '</div>';
+        }
+
+        htmlToDisplay += '</div>';
+    }
+
+    instructions.style.visibility = "hidden";
+    instructions.style.position = "absolute";
+    content.style.visibility = "visible";
+    content.style.position = "static";
+    content.className = "content";
+    content.innerHTML = htmlToDisplay;
+  }
+
+  function validate() {
+    readSingleFile(fileinput.files[0]);
+  }
+
+  instructions.style.visibility = "visible" ;
+  instructions.style.position = "static";
+  content.style.visibility = "hidden" ;
+  content.style.position = "absolute";
+  content.className = "";
+</script>
+
+</body>
+</html>
