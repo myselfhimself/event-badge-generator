@@ -18,3 +18,6 @@ Voici la configuration de l'impression :
 
 ## Étape 3
 Valider !
+
+# Librairies utilisées
+- [PapaParse](https://github.com/mholt/PapaParse)
