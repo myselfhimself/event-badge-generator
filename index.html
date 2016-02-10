@@ -26,9 +26,12 @@
   </div>
 
   <div id="content" class="content">
-    <!-- <div class="container">
 
-      <div class="card">
+    <!--
+    <div class="container">
+
+      <div class="card" >
+        <img src="img/img.jpg" class="back-img" />
         <div class="text-container">
           <p class="text">Thibaut Tauveron</p>
           <p class="text">Ecole de technologie superieure</p>
@@ -37,7 +40,9 @@
         <div class="img-container">
           <img src="img/android.png" class="icon" />
         </div>
+
       </div><div class="card">
+        <img src="img/img.jpg" class="back-img" />
         <div class="text-container">
           <p class="text">Thibaut Tauveron</p>
           <p class="text">Ecole de technologie superieure</p>
@@ -48,7 +53,9 @@
         </div>
       </div>
 
-    </div> -->
+    </div>
+  -->
+
   </div>
 
 <script>
@@ -78,7 +85,7 @@
 
         for(card = 0; card < 2 ; card++) {
               htmlToDisplay += '<div class="card">';
-
+              htmlToDisplay += '<img src="img/img.jpg" class="back-img" />';
               htmlToDisplay += '<div class="text-container">';
               htmlToDisplay += '<p class="text">'+contents[line][0]+' '+contents[line][1]+'</p>';
               htmlToDisplay += '<p class="text">'+contents[line][2]+'</p>';
