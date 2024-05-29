@@ -6,7 +6,7 @@ Pour changer le format, il faut changer les mesures en mm dans les classes css s
 
 Finalement, pour tous les autres changements (images, positionnement...), il faut aussi éditer le css directement.
 
-[Démonstration](http://gnut3ll4.github.io/event-badge-generator/)
+[Démonstration](http://myselfhimself.github.io/medjugorje-event-badge-generator /)
 
 ### Étape 1
 Choisir un fichier .csv avec 5 colonnes :
