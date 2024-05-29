@@ -9,10 +9,12 @@ Finalement, pour tous les autres changements (images, positionnement...), il fau
 [Démonstration](http://myselfhimself.github.io/medjugorje-event-badge-generator/)
 
 ### Étape 1
-Choisir un fichier .csv avec 5 colonnes :
+Choisir un fichier .csv avec 4 colonnes :
 ```csv
-First Name,Last Name,University name,Team's name,Development platform
+Name,Role,Country,ISO
 ```
+Le code ISO sert a fabriquer un drapeau emoji.
+
 ### Étape 2
 Imprimer la page générée avec **Ctrl + p**
 

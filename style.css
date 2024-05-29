@@ -5,8 +5,8 @@
 
 .content {
   margin:auto auto;
-  width: 194mm;
-  height:252mm;
+  width: 210mm;
+  height:297mm;
 }
 
 .img-container {
@@ -15,15 +15,16 @@
 }
 
 .icon {
-  height: 52;
-  float: inherit;
-  margin-left: 20mm;
-  margin-bottom: 10mm;
+	max-height: 17mm;
+	position: absolute;
+	bottom: 0;
+	right: 24mm;
+	margin: 4mm;
 }
 
 .card {
   width: 95mm;
-  height: 80mm;
+  height: 61mm;
   position:relative;
   display: inline-block;
   /*background-image: url("img/img.jpg");
@@ -42,24 +43,42 @@
 
 }
 .text-container {
-  margin-left: 15mm;
-  margin-top: 17mm;
+  margin-left: 6mm;
+  margin-top: 10mm;
 }
 .text {
-  color: white;
+  color: black;
   font-family: "roboto";
   font-weight: bolder;
 }
 
+.name {
+	font-size: 9mm;
+	font-style: italic;
+	color: gray;
+	margin-right: 1mm;
+}
+
+.country {
+  font-size: 8mm;
+}
+
 .team {
-  margin-top: 8mm;
+	/* margin-top: 8mm; */
+	font-size: 6mm;
+	font-weight: normal;
+	/* font-style: italic; */
+	color: grey;
+	position: absolute;
+	bottom: 9mm;
 }
 
 .back-img {
-  max-height:100%;
-  width:auto;
-  z-index: -10;
-  position: absolute;
-  bottom:0;
-  right:0;
+	max-height: 36%;
+	width: auto;
+	z-index: -10;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 6mm;
 }
