@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
+
 @font-face {
   font-family: "roboto";
   src: url('font/Roboto-Regular.ttf');
@@ -52,6 +54,10 @@
   font-weight: bolder;
 }
 
+.text.title {
+  font-family: 'Galada', Arial, Helvetica, sans-serif;
+}
+
 .name {
 	font-size: 9mm;
 	font-style: italic;
@@ -74,7 +80,7 @@
 }
 
 .back-img {
-	max-height: 36%;
+	max-height: 14mm;
 	width: auto;
 	z-index: -10;
 	position: absolute;
