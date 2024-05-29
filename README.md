@@ -1,6 +1,6 @@
 # Event Badge Generator
 ## Instructions
-Attention: le format de sortie est adapté à **Letter US**.
+Attention: le format de sortie est adapté à **A4** pour des badge de 95 x 65mm horizontal.
 
 Pour changer le format, il faut changer les mesures en mm dans les classes css selon les dimensions du format papier souhaité.
 
@@ -27,3 +27,6 @@ Valider !
 
 ## Librairies utilisées
 - [PapaParse](https://github.com/mholt/PapaParse)
+
+## Credits
+Merci à [@ttauveron](https://github.com/ttauveron) ayant créé le projet à l'origine de ce léger fork.
